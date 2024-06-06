@@ -15,33 +15,9 @@ INCLUDE inkutils-compact.ink
 
 # Functions
 
-## random_without(from, to, excluding)
+## Utilities
 
-Returns a random number in a range, excluding one number.
-
-~ x = random_without(1, 5, 3)
-
-Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
-
-(Note: If you pass the exact same number for all three parameters (for example: "random_without(2, 2, 2)"), there is no reasonable result to return, so we just return the number (2))
-  
-## min(number1, number2)
-
-Returns the smaller one of two numbers.
-
-~ x = min (13, 2)
-
-Assigns 2 to x because it's smaller than 13.
-
-## max(number1, number2)
-
-Returns the bigger one of two numbers.
-  
-~ x = max (13, 2)
-
-Assigns 13 to x because it's bigger than 2.
-
-## swap(variable1, variable2)
+### swap(variable1, variable2)
 
 Swaps the values of two variables.
 
@@ -49,19 +25,7 @@ Swaps the values of two variables.
   
 Now a holds the value of b and b holds the value of a.
 
-## pick2 ... pick20
-
-Returns one of its arguments at random.
-
-~ x = pick3(1, 5, 7)
-
-Returns either 1, 5 or 7 
-
-She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned")}.
-
-(Hint: if you have, say, eight parameters but you use pick7, Inky will tell you that there are eight parameters, so you do not need to count them yourself.)
-
-## alter(variable, value)
+### alter(variable, value)
 
 Increases the value of a variable.
 
@@ -75,7 +39,7 @@ this function allows you to change variables inline. Example from the official I
 
 (Hint: to decrease, use a negative value: alter(gold, -10))
 
-## alter_mult(variable, value)
+### alter_mult(variable, value)
 
 Like alter, but multiplies the variable.
 
@@ -85,7 +49,7 @@ Like alter, but multiplies the variable.
 
 "charisma" is 21 now.
 
-## alter_div(variable, value)
+### alter_div(variable, value)
 
 Like alter, but divides the variable.
 
@@ -95,7 +59,85 @@ Like alter, but divides the variable.
 
 "charisma" is 4 now.
 
-## number_as_word(number)
+## Math
+
+### min(number1, number2)
+
+Returns the smaller one of two numbers.
+
+~ x = min (13, 2)
+
+Assigns 2 to x because it's smaller than 13.
+
+### max(number1, number2)
+
+Returns the bigger one of two numbers.
+  
+~ x = max (13, 2)
+
+Assigns 13 to x because it's bigger than 2.
+
+### round(number)
+
+Rounds a number.
+
+~ x = round(3.5)
+
+x is 4 now.
+
+~ x = round(3.2)
+
+x is 3 now.
+
+Beware of floating point math, though:
+
+~ x = round(4.4999999)
+
+x is 5 (!) now.
+
+(Basically, floating point numbers are only precise up to a certain digit after the comma
+and 4.4999999 is interpreted as 4.5 which rounds up to 5.)
+
+### abs(number)
+
+Returns the absolute value of the number.
+
+~ x = abs(7)
+
+x is 7 now.
+
+~ x = abs(-15)
+
+x is 15 now.
+
+## Random
+
+### random_without(from, to, excluding)
+
+Returns a random number in a range, excluding one number.
+
+~ x = random_without(1, 5, 3)
+
+Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
+
+(Note: If you pass the exact same number for all three parameters (for example: "random_without(2, 2, 2)"), there is no reasonable result to return, so we just return the number (2))
+
+
+### pick2 ... pick20
+
+Returns one of its arguments at random.
+
+~ x = pick3(1, 5, 7)
+
+Returns either 1, 5 or 7 
+
+She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned")}.
+
+(Hint: if you have, say, eight parameters but you use pick7, Inky will tell you that there are eight parameters, so you do not need to count them yourself.)
+
+## Language
+
+### number_as_word(number)
 
 Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
 
@@ -103,25 +145,10 @@ Returns the number as an English word if it's between 0 and 9, otherwise returns
 
 Will print: "seven, eight, nine, 10, 11"
 
-## roman(number)
+### pronouns
+There are some functions and variables that can be used to set and print a character's pronouns.
 
-Prints the number as a Roman numeral.
-
-~ roman(7694)
-
-Will print "MMMMMMMDCXCIV".
-
-Note 1: Only integer numbers between 1 and 9999 will be printed as Roman numerals. All other numbers are just printed in standard numerals.
-
-Note 2: There have been different ways to write Roman numbers throughout history. This function prints
-the number 8 as VIII, not as IIX, the number 80 as LXXX, not as XXC, etc.
-
-Note 3: You cannot assign the Roman number to a variable, you can only print it.
-
-## pronouns
-There are also functions and variables that can be used to set and print a character's pronouns.
-
-You can set pronouns for up to 6 virtual characters using the "init_character" functions:
+You can set pronouns for up to 6 virtual characters using the **init_character** function:
 
 ~ init_character(1, "he") //the first character has he/him pronouns
 
@@ -135,9 +162,9 @@ You can set pronouns for up to 6 virtual characters using the "init_character" f
 
 ~ init_character(4, "it") 
 
-After the pronouns are initialized, you can do this:
+After the character pronouns are initialized, you can do this:
 
-{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.
+**{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.**
 
 This will print one of the following (depending on the pronouns you set for the first character):
 
@@ -167,9 +194,19 @@ they, them, their, theirs, themselves (or themself), s
 
 (Hint: You can also call "init_character" in the middle of the story and change a character's pronouns.)
 
+## Other
 
-{round(4.49999999999)}
-5
+### roman(number)
 
-{round(4.49)}
-5
+Prints the number as a Roman numeral.
+
+~ roman(7694)
+
+Will print "MMMMMMMDCXCIV".
+
+Note 1: Only integer numbers between 1 and 9999 will be printed as Roman numerals. All other numbers are just printed in standard numerals.
+
+Note 2: There have been different ways to write Roman numbers throughout history. This function prints
+the number 8 as VIII, not as IIX, the number 80 as LXXX, not as XXC, etc.
+
+Note 3: You cannot assign the Roman number to a variable, you can only print it.
