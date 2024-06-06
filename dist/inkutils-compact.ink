@@ -3,7 +3,9 @@
         ~ return u3_from
     }
     {u3_to < u3_from:
-        ~ swap(u3_to, u3_from)
+        ~ temp u3_swap = u3_to
+        ~ u3_to = u3_from
+        ~ u3_from = u3_swap
     }
     ~ temp u3_x = RANDOM(u3_from, u3_to - 1)
     {u3_x >= u3_without:
