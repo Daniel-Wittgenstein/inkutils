@@ -20,7 +20,7 @@ Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
   
 ## min(number1, number2)
 
-Returns the smaller of two numbers.
+Returns the smaller one of two numbers.
 
 ~ x = min (13, 2)
 
@@ -28,7 +28,7 @@ Assigns 2 to x because it's smaller than 13.
 
 ## max(number1, number2)
 
-Returns the bigger of two numbers.
+Returns the bigger one of two numbers.
   
 ~ x = max (13, 2)
 
