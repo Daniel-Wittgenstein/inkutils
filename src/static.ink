@@ -243,7 +243,7 @@ VAR s6 = ""
             ~ u3_they = "she"
             ~ u3_them = "her"
             ~ u3_their = "her"
-            ~ u3_theirs = "her"
+            ~ u3_theirs = "hers"
             ~ u3_themselves = "herself"
             ~ u3_They = "She"
             ~ u3_Them = "Her"
@@ -388,3 +388,45 @@ VAR s6 = ""
 
     ~ themself = themselves
     ~ Themself = Themselves
+
+=== function gend(m, f, n)
+    {they:
+        - "he": ~ return m
+        - "she": ~ return f
+        - else: ~ return n
+    }
+
+=== function gend2(m, f, n)
+    {they2:
+        - "he": ~ return m
+        - "she": ~ return f
+        - else: ~ return n
+    }
+
+=== function gend3(m, f, n)
+    {they3:
+        - "he": ~ return m
+        - "she": ~ return f
+        - else: ~ return n
+    }
+
+=== function gend4(m, f, n)
+    {they4:
+        - "he": ~ return m
+        - "she": ~ return f
+        - else: ~ return n
+    }
+
+=== function gend5(m, f, n)
+    {they5:
+        - "he": ~ return m
+        - "she": ~ return f
+        - else: ~ return n
+    }
+
+=== function gend6(m, f, n)
+    {they6:
+        - "he": ~ return m
+        - "she": ~ return f
+        - else: ~ return n
+    }

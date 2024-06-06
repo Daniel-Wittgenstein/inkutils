@@ -135,28 +135,20 @@ She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned
 
 (Hint: if you have, say, eight parameters but you use pick7, Inky will tell you that there are eight parameters, so you do not need to count them yourself.)
 
-## Language
+## Pronouns and Gendered Language
+These are functions (and some global variables) that can be used to set and print a
+character's pronouns and related stuff.
 
-### number_as_word(number)
-
-Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
-
-{number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
-
-Will print: "seven, eight, nine, 10, 11"
-
-### pronouns
-There are some functions and variables that can be used to set and print a character's pronouns.
-
+###  Setting and Printing Pronouns
 You can set pronouns for up to 6 virtual characters using the **init_character** function:
 
 ~ init_character(1, "he") //the first character has he/him pronouns
 
 ~ init_character(2, "she") //the second character has she/her pronouns
 
-~ init_character(6, "themselves") //the sixth character has they/them pronouns
+~ init_character(6, "themselves") //the sixth character has they/them/themselves pronouns
 
-~ init_character(5, "themself") //the fifth character has they/them pronouns, but use "themself" instead of "themselves"
+~ init_character(5, "themself") //the fifth character has they/them/themself pronouns
 
 ~ init_character(3, "you") //etc.
 
@@ -194,7 +186,45 @@ they, them, their, theirs, themselves (or themself), s
 
 (Hint: You can also call "init_character" in the middle of the story and change a character's pronouns.)
 
-## Other
+### gend(male, female, neutral) ... gend6(male, female, neutral)
+
+This function prints the first string if "he/him" pronouns have been set for the character,
+the second string if "she/her" pronouns have been set for the character,
+and the third string if "they/them" pronouns have been set for the character.
+
+```
+~ init_character("she")
+
+The {gend("man", "woman", "person")} takes {their} purse.
+```
+
+Prints: "The woman takes her purse."
+
+```
+~ init_character2("he")
+
+The {gend2("man", "woman", "person")} takes {their2} purse.
+```
+
+Prints: "The man takes his purse."
+
+```
+~ init_character3("themself")
+
+The {gend3("man", "woman", "person")} takes {their3} purse.
+```
+
+Prints: "The person takes their purse."
+
+## Numbers, Words and Letters
+
+### number_as_word(number)
+
+Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
+
+{number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
+
+Will print: "seven, eight, nine, 10, 11"
 
 ### roman(number)
 
