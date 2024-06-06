@@ -188,7 +188,7 @@ they, them, their, theirs, themselves (or themself), s
 
 ### gend(male, female, neutral) ... gend6(male, female, neutral)
 
-This function prints the first string if "he/him" pronouns have been set for the character,
+This function returns the first string if "he/him" pronouns have been set for the character,
 the second string if "she/her" pronouns have been set for the character,
 and the third string if "they/them" pronouns have been set for the character.
 
