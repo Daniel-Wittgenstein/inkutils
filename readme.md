@@ -1,10 +1,17 @@
 A collection of useful Ink functions that can be used in any story.
 
-Full version: contains all functions, including all functions with variable argument length up to 20 arguments.
+[Full version](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/dist/inkutils-all.ink) (contains all functions, including all functions with variable argument length up to 20 arguments).
 
-Small version: no functions with variable argument length, smaller size.
+[Compact version](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/dist/inkutils-compact.ink) (no functions with variable argument length, smaller size):
 
-Usage: INCLUDE inkutils.ink
+Usage:
+
+INCLUDE inkutils-all.ink
+
+or:
+
+INCLUDE inkutils-compact.ink
+
 
 # Functions
 
