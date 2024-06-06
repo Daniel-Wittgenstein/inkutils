@@ -96,3 +96,18 @@ Returns the number as an English word if it's between 0 and 9, otherwise returns
 
 Will print: "seven, eight, nine, 10, 11"
 
+## roman(number)
+
+Prints the number as a Roman numeral.
+
+~ roman(7694)
+
+Will print "MMMMMMMDCXCIV".
+
+Note 1: Only integer numbers between 1 and 9999 will be printed as Roman numerals. All other numbers are just printed in standard numerals.
+
+Note 2: There have been different ways to write Roman numbers throughout history. This function prints
+the number 8 as VIII, not as IIX, the number 80 as LXXX, not as XXC, etc.
+
+Note 3: You cannot assign the Roman number to a variable, you can only print it.
+

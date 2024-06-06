@@ -105,14 +105,16 @@ swap 15
 
 \-1, zero, one, two, three, four, five, six, seven, eight, nine, 10, 11
 
+~ roman(7694)
+MMMMMMMDCXCIV
 
+~ roman(10000)
+10000
 
+~ roman(0)
+0
 
-
-
-
-
-
-
+~ roman(768)
+DCCLXVIII
 
 
