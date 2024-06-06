@@ -391,44 +391,44 @@ VAR s6 = ""
     ~ themself = themselves
     ~ Themself = Themselves
 
-=== function gend(m, f, n)
+=== function gend(u3_m, u3_f, u3_n)
     {they:
-        - "he": ~ return m
-        - "she": ~ return f
-        - else: ~ return n
+        - "he": ~ return u3_m
+        - "she": ~ return u3_f
+        - else: ~ return u3_n
     }
 
-=== function gend2(m, f, n)
+=== function gend2(u3_m, u3_f, u3_n)
     {they2:
-        - "he": ~ return m
-        - "she": ~ return f
-        - else: ~ return n
+        - "he": ~ return u3_m
+        - "she": ~ return u3_f
+        - else: ~ return u3_n
     }
 
-=== function gend3(m, f, n)
+=== function gend3(u3_m, u3_f, u3_n)
     {they3:
-        - "he": ~ return m
-        - "she": ~ return f
-        - else: ~ return n
+        - "he": ~ return u3_m
+        - "she": ~ return u3_f
+        - else: ~ return u3_n
     }
 
-=== function gend4(m, f, n)
+=== function gend4(u3_m, u3_f, u3_n)
     {they4:
-        - "he": ~ return m
-        - "she": ~ return f
-        - else: ~ return n
+        - "he": ~ return u3_m
+        - "she": ~ return u3_f
+        - else: ~ return u3_n
     }
 
-=== function gend5(m, f, n)
+=== function gend5(u3_m, u3_f, u3_n)
     {they5:
-        - "he": ~ return m
-        - "she": ~ return f
-        - else: ~ return n
+        - "he": ~ return u3_m
+        - "she": ~ return u3_f
+        - else: ~ return u3_n
     }
 
-=== function gend6(m, f, n)
+=== function gend6(u3_m, u3_f, u3_n)
     {they6:
-        - "he": ~ return m
-        - "she": ~ return f
-        - else: ~ return n
+        - "he": ~ return u3_m
+        - "she": ~ return u3_f
+        - else: ~ return u3_n
     }
