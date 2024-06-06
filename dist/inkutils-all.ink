@@ -43,9 +43,20 @@
 === function alter_div(ref u3_x, u3_d) ===
 	~ u3_x = u3_x / u3_d
 
-
-
-
+=== function number_as_word(u3_x)
+    {u3_x:
+        - 0: ~ return "zero"
+        - 1: ~ return "one"
+        - 2: ~ return "two"
+        - 3: ~ return "three"
+        - 4: ~ return "four"
+        - 5: ~ return "five"
+        - 6: ~ return "six"
+        - 7: ~ return "seven"
+        - 8: ~ return "eight"
+        - 9: ~ return "nine"
+        - else: ~ return u3_x 
+    }
 
 
 === function pick2(u3_1, u3_2)

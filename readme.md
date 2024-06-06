@@ -88,3 +88,11 @@ Like alter, but divides the variable.
 
 "charisma" is 4 now.
 
+## number_as_word(number)
+
+Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
+
+{number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
+
+Will print: "seven, eight, nine, 10, 11"
+

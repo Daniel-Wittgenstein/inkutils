@@ -101,10 +101,9 @@ swap 15
 {a}
 18
 
+{number_as_word(-1)}, {number_as_word(0)}, {number_as_word(1)}, {number_as_word(2)}, {number_as_word(3)}, {number_as_word(4)}, {number_as_word(5)}, {number_as_word(6)}, {number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
 
-
-
-
+\-1, zero, one, two, three, four, five, six, seven, eight, nine, 10, 11
 
 
 
