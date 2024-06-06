@@ -60,7 +60,7 @@ Increases the value of a variable.
 
 While you could, of course just do:
 
-~ health += 10
+  ~ health += 10
 
 this function allows you to change variables inline. Example from the official Ink docs:
 
@@ -72,8 +72,8 @@ this function allows you to change variables inline. Example from the official I
 
 Like alter, but multiplies the variable.
 
-~ charisma = 7
-~ alter(charisma, 3)
+  ~ charisma = 7
+  ~ alter(charisma, 3)
 
 "charisma" is 21 now.
 
@@ -81,8 +81,8 @@ Like alter, but multiplies the variable.
 
 Like alter, but divides the variable.
 
-~ charisma = 12
-~ alter(charisma, 3)
+  ~ charisma = 12
+  ~ alter(charisma, 3)
 
 "charisma" is 4 now.
 
