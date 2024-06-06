@@ -33,3 +33,16 @@
         ~ return -u3_a
     }
     ~ return u3_a
+
+=== function alter(ref u3_x, u3_d) ===
+	~ u3_x += u3_d
+
+=== function alter_mult(ref u3_x, u3_d) ===
+	~ u3_x = u3_x * u3_d
+
+=== function alter_div(ref u3_x, u3_d) ===
+	~ u3_x = u3_x / u3_d
+
+
+
+

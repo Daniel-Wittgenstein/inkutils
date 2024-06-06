@@ -85,3 +85,35 @@ swap 15
 -> back2
 
 - (continue2)
+
+~ a = 0
+~ alter(a, 10)
+{a}
+10
+~ alter(a, -17)
+{a}
+\-7
+~ a = 24
+~ alter_mult(a, 3)
+{a}
+72
+~ alter_div(a, 4)
+{a}
+18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -34,6 +34,19 @@
     }
     ~ return u3_a
 
+=== function alter(ref u3_x, u3_d) ===
+	~ u3_x += u3_d
+
+=== function alter_mult(ref u3_x, u3_d) ===
+	~ u3_x = u3_x * u3_d
+
+=== function alter_div(ref u3_x, u3_d) ===
+	~ u3_x = u3_x / u3_d
+
+
+
+
+
 
 === function pick2(u3_1, u3_2)
 	{ shuffle:
