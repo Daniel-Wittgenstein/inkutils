@@ -1,4 +1,4 @@
-A collection of useful [ink](https://www.inklestudios.com/ink/) functions that can be used in any story.
+A collection of useful [ink](https://www.inklestudios.com/ink/) functions that can be used in any story (commercial use is allowed: [license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/license.md)).
 
 [Full version](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/dist/inkutils-all.ink) (contains all functions, including all functions with variable argument length up to 20 arguments).
 
