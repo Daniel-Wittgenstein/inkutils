@@ -116,8 +116,11 @@ x is 15 now.
 
 Decreases the value of variable by "number" percent.
 
+```
 ~ x = 60
+
 ~ minus(x, 25)
+```
 
 25% of 60 = 15, so x gets decreased by 15 and ends up being 45.
 
@@ -125,8 +128,11 @@ Decreases the value of variable by "number" percent.
 
 Calculates the difference between 100 and the variable value and increases the variable value by "number" percent of that amount.
 
+```
 ~ x = 60
+
 ~ plus(x, 25)
+```
 
 The difference between 100 and 60 is 40. 25% of 40 is 10, so x gets
 increased by 10 and ends up being 70.
