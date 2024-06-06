@@ -112,6 +112,28 @@ x is 7 now.
 
 x is 15 now.
 
+### minus(variable, number)
+
+Decreases the value of variable by "number" percent.
+
+~ x = 60
+~ minus(x, 25)
+
+25% of 60 = 15, so x gets decreased by 15 and ends up being 45.
+
+### plus(variable, number)
+
+Calculates the difference between 100 and the variable value and increases the variable value by "number" percent of that amount.
+
+~ x = 60
+~ plus(x, 25)
+
+The difference between 100 and 60 is 40. 25% of 40 is 10, so x gets
+increased by 10 and ends up being 70.
+
+The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s "Fairmath" operators. They guarantee that the value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values).
+
+
 ## Random
 
 ### random_without(from, to, excluding)

@@ -432,3 +432,15 @@ VAR s6 = ""
         - "she": ~ return u3_f
         - else: ~ return u3_n
     }
+
+=== function plus(ref u3_x, u3_p)
+    ~ u3_x = round(u3_x + (100 - u3_x) * (FLOAT(u3_p) / 100))
+    {u3_x > 100:
+        ~ u3_x = 100
+    }
+
+=== function minus(ref u3_x, u3_p)
+    ~ u3_x = round(u3_x - u3_x * (FLOAT(u3_p) / 100))
+    {u3_x < 0:
+        ~ u3_x = 0
+    }
