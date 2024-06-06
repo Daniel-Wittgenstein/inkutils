@@ -58,11 +58,11 @@ swap 3
 swap {txta} {txtb}
 swap hello world
 
-swap {abs(-9)}
-swap 9
+abs {abs(-9)}
+abs 9
 
-swap {abs(15)}
-swap 15
+abs {abs(15)}
+abs 15
 
 
 ~ count = 100
