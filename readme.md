@@ -4,6 +4,8 @@ A collection of useful [ink](https://www.inklestudios.com/ink/) functions that c
 
 [Compact version](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/dist/inkutils-compact.ink) (no functions with variable argument length, smaller size):
 
+All functions are independent of each other, so you can also remove the ones you do not need.
+
 Usage:
 
 INCLUDE inkutils-all.ink
