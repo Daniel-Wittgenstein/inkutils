@@ -2,7 +2,7 @@ A collection of useful Ink functions that can be used in any story.
 
 Full version: contains all functions, including all functions with variable argument length up to 20 arguments.
 
-Small version: no functions with variable argument length, small size.
+Small version: no functions with variable argument length, smaller size.
 
 Usage: INCLUDE inkutils.ink
 
