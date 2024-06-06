@@ -72,8 +72,9 @@ this function allows you to change variables inline. Example from the official I
 
 Like alter, but multiplies the variable.
 
-  \~ charisma = 7
-  \~ alter(charisma, 3)
+~ charisma = 7
+
+~ alter_mult(charisma, 3)
 
 "charisma" is 21 now.
 
@@ -81,8 +82,9 @@ Like alter, but multiplies the variable.
 
 Like alter, but divides the variable.
 
-  \~ charisma = 12
-  \~ alter(charisma, 3)
+~ charisma = 12
+
+~ alter_div(charisma, 3)
 
 "charisma" is 4 now.
 
