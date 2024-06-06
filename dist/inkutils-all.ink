@@ -28,6 +28,15 @@
     ~ u3_a = u3_b
     ~ u3_b = u3_c
 
+=== function round(u3_x)
+    {u3_x < 0:
+        {FLOOR(u3_x) + 1 - u3_x < 0.5:
+            ~ return FLOOR(u3_x) + 1
+        }
+        ~ return FLOOR(u3_x)
+    }
+    ~ return FLOOR(u3_x + 0.5)
+
 === function abs(u3_a)
     {u3_a < 0:
         ~ return -u3_a

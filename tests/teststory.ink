@@ -145,6 +145,36 @@ They look at themself - at their own reflection. The reflection looks back at th
 {They4} look{s4} at {themselves4} - at {their4} own reflection. The reflection looks back at {them4}.
 They look at themselves - at their own reflection. The reflection looks back at them.
 
+{round(-1.49)}
+\-1
+{round(-1.5)}
+\-2
+{round(-1.51)}
+\-2
+{round(0)}
+0
+{round(-0.499)}
+0
+{round(-0.5)}
+\-1
+{round(-0.51)}
+\-1
+{round(1)}
+1
+{round(2.2)}
+2
+{round(2.8)}
+3
+{round(17.01)}
+17
+{round(4.49)}
+4
+{round(4.5)}
+5
+{round(4.51)}
+5
+
+
 
 
 
