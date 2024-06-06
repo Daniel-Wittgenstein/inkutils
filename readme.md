@@ -52,3 +52,6 @@ Returns either 1, 5 or 7
 
 She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned")}.
 
+(If you have, say, eight parameters but you use pick7, Inky will tell you that there are eight parameters,
+so you do not need to count them yourself.)
+
