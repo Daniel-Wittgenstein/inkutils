@@ -111,3 +111,52 @@ the number 8 as VIII, not as IIX, the number 80 as LXXX, not as XXC, etc.
 
 Note 3: You cannot assign the Roman number to a variable, you can only print it.
 
+## pronouns
+There are also functions and variables that can be used to set and print a character's pronouns.
+
+You can set pronouns for up to 6 virtual characters using the "init_character" functions:
+
+~ init_character(1, "he") //the first character has he/him pronouns
+
+~ init_character(2, "she") //the second character has she/her pronouns
+
+~ init_character(6, "themselves") //the sixth character has they/them pronouns
+
+~ init_character(5, "themself") //the fifth character has they/them pronouns, but use "themself" instead of "themselves"
+
+~ init_character(3, "you") //etc.
+
+~ init_character(4, "it") 
+
+After the pronouns are initialized, you can do this:
+
+{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.
+
+This will print one of the following (depending on the pronouns you set for the first character):
+
+* He looks at himself - at his own reflection. The reflection looks back at him.
+
+* She looks at herself - at her own reflection. The reflection looks back at her.
+
+* It looks at itself - at its own reflection. The reflection looks back at it.
+
+* You look at yourself - at your own reflection. The reflection looks back at you.
+
+* They look at themselves - at their own reflection. The reflection looks back at them.
+
+* They look at themself - at their own reflection. The reflection looks back at them.
+
+For the second character, you would use:
+
+{They2} look{s2} at {themselves2} - at {their2} own reflection. The reflection looks back at {them2}.
+
+etc.
+
+Note that {they} will lower-case the pronoun and {They} will upper-case it. This works for all pronouns.
+
+Also note that only {they}, {them} etc. are allowed for printing, because it's the only pronoun with no ambiguous forms. These are all the variables you can use:
+
+they, them, their, theirs, themselves (or themself), s
+
+(Hint: You can also call "init_character" in the middle of the story and change a character's pronouns.)
+

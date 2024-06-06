@@ -117,4 +117,36 @@ MMMMMMMDCXCIV
 ~ roman(768)
 DCCLXVIII
 
+{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.
+They look at themselves - at their own reflection. The reflection looks back at them.
+
+~ init_character(1, "she")
+~ init_character(2, "he")
+~ init_character(3, "it")
+~ init_character(4, "themselves")
+~ init_character(5, "themself")
+~ init_character(6, "you")
+
+{They2} look{s2} at {themselves2} - at {their2} own reflection. The reflection looks back at {them2}.
+He looks at himself - at his own reflection. The reflection looks back at him.
+
+{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.
+She looks at herself - at her own reflection. The reflection looks back at her.
+
+{They3} look{s3} at {themselves3} - at {their3} own reflection. The reflection looks back at {them3}.
+It looks at itself - at its own reflection. The reflection looks back at it.
+
+{They6} look{s6} at {themselves6} - at {their6} own reflection. The reflection looks back at {them6}.
+You look at yourself - at your own reflection. The reflection looks back at you.
+
+{They5} look{s5} at {themselves5} - at {their5} own reflection. The reflection looks back at {them5}.
+They look at themself - at their own reflection. The reflection looks back at them.
+
+{They4} look{s4} at {themselves4} - at {their4} own reflection. The reflection looks back at {them4}.
+They look at themselves - at their own reflection. The reflection looks back at them.
+
+
+
+
+
 
