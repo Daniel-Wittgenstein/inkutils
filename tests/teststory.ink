@@ -1,4 +1,8 @@
-INCLUDE ../dist/inkutils-all.ink
+INCLUDE ../src/standard.ink
+INCLUDE ../src/roman.ink
+INCLUDE ../src/pronouns.ink
+INCLUDE ../src/random.ink
+
 
 ~ temp count = 100
 ~ temp x = 0
@@ -259,6 +263,21 @@ person
 {x}
 70
 
+~ temp count_taiga = 0
+~ count = 100
+- (back_bucket_random)
+~ count --
+~ temp xx = bucket_random14("50%", "forest", "plains", "hills", "mountains", "30%", "swamp", "high mountains", "marshland", "18%", "tropical rain forest", "tundra", "2%", "Taiga")
 
+{xx == "Taiga":
+    ~ count_taiga++
+    {count_taiga >= 15:
+        back_bucket error
+        error!
+    }
+}
 
+{count > 0:
+    -> back_bucket_random
+}
 

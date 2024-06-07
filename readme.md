@@ -1,21 +1,22 @@
 A collection of useful [ink](https://www.inklestudios.com/ink/) functions that can be used in any story (commercial use is allowed: [license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/license.md)).
 
-[Full version](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/dist/inkutils-all.ink) (contains all functions, including all functions with variable argument length up to 20 arguments).
+[standard.ink: Standard Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/standard.ink)
 
-[Compact version](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/dist/inkutils-compact.ink) (no functions with variable argument length, smaller size):
+[pronouns.ink: Pronoun Handling](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/pronouns.ink)
+
+[roman.ink: Roman Numbers](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/roman.ink)
+
+[random.ink: Additional Random Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/random.ink)
 
 Usage:
 
-INCLUDE inkutils-all.ink
+INCLUDE standard.ink
 
-or:
+INCLUDE pronouns.ink
 
-INCLUDE inkutils-compact.ink
+etc.
 
-
-# Functions
-
-## Utilities
+# standard.ink
 
 ### swap(variable1, variable2)
 
@@ -58,8 +59,6 @@ Like alter, but divides the variable.
 ~ alter_div(charisma, 3)
 
 "charisma" is 4 now.
-
-## Math
 
 ### min(number1, number2)
 
@@ -137,9 +136,6 @@ increased by 10 and ends up being 70.
 
 The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s "Fairmath" operators. They guarantee that the value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values).
 
-
-## Random
-
 ### random_without(from, to, excluding)
 
 Returns a random number in a range, excluding one number.
@@ -150,20 +146,15 @@ Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
 
 (Note: If you pass the exact same number for all three parameters (for example: "random_without(2, 2, 2)"), there is no reasonable result to return, so we just return the number (2))
 
+### number_as_word(number)
 
-### pick2 ... pick20
+Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
 
-Returns one of its arguments at random.
+{number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
 
-~ x = pick3(1, 5, 7)
+Will print: "seven, eight, nine, 10, 11"
 
-Returns either 1, 5 or 7 
-
-She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned")}.
-
-(Hint: if you have, say, eight parameters but you use pick7, Inky will tell you that there are eight parameters, so you do not need to count them yourself.)
-
-## Pronouns and Gendered Language
+# pronouns.ink
 These are functions (and some global variables) that can be used to set and print a
 character's pronouns and related stuff.
 
@@ -244,15 +235,7 @@ The {gend3("man", "woman", "person")} takes {their3} purse.
 
 Prints: "The person takes their purse."
 
-## Numbers, Words and Letters
-
-### number_as_word(number)
-
-Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
-
-{number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
-
-Will print: "seven, eight, nine, 10, 11"
+# roman.ink
 
 ### roman(number)
 
@@ -268,3 +251,31 @@ Note 2: There have been different ways to write Roman numbers throughout history
 the number 8 as VIII, not as IIX, the number 80 as LXXX, not as XXC, etc.
 
 Note 3: You cannot assign the Roman number to a variable, you can only print it.
+
+
+{bucket_random16("50%", "forest", "plains", "hills", "mountains", "30%", "swamp", "high mountains", "marshland", "15%", "tropical rain forest", "tundra", "5%", "Maquis shrubland", "Wattenmeer", "Taiga")}
+
+# random.ink
+
+(This file is pretty big due to variable argument length functions.)
+
+### pick2 ... pick20
+
+Returns one of its arguments at random.
+
+~ x = pick3(1, 5, 7)
+
+Returns either 1, 5 or 7 
+
+She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned")}.
+
+(Hint: if you have, say, eight parameters but you use pick7, Inky will tell you that there are eight parameters, so you do not need to count them yourself.)
+
+### bucket_random4 ... bucket_random20
+
+  ~ x = bucket_random15("50%", "forest", "plains", "hills", "mountains", "30%", "swamp", "high mountains", "marshland", "18%", "tropical rain forest", "tundra", "2%", "Taiga", "Maquis shrubland")
+
+  In 50% of cases, x will be assigned either "forest", "plains", "hills" or "mountains" (at random),
+  in 30% of cases, x will be assigned either "swamp", "high mountains" or "marshland" (at random) etc.
+
+  The numbers must be integers and must add up to exactly 100%, otherwise you will get an ink error.
