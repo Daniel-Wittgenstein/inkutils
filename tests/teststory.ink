@@ -140,17 +140,6 @@ abs 15
 
 \-1, zero, one, two, three, four, five, six, seven, eight, nine, 10, 11
 
-~ roman(7694)
-MMMMMMMDCXCIV
-
-~ roman(10000)
-10000
-
-~ roman(0)
-0
-
-~ roman(768)
-DCCLXVIII
 
 {They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.
 They look at themselves - at their own reflection. The reflection looks back at them.
@@ -280,4 +269,54 @@ person
 {count > 0:
     -> back_bucket_random
 }
+
+
+~ roman(7694)
+MMMMMMMDCXCIV
+
+~ roman(768)
+DCCLXVIII
+
+~ roman(10000) //out of range
+10000
+
+~ roman(0) //out of range
+0
+
+~ roman(-5) //out of range negative
+\-5
+
+~ roman(2000) //only thousands
+MM
+
+~ roman(300) //only hundreds
+CCC
+
+~ roman(80) //only tens
+LXXX
+
+~ roman(3) //only ones
+III
+
+~ roman(3007) //thousands and ones
+MMMVII
+
+~ roman(2001)
+MMI
+
+~ roman(7040) //thousands and tens
+MMMMMMMXL
+
+~ roman(5200) //thousands and hundreds
+MMMMMCC
+
+~ roman(203) //hundreds and ones
+CCIII
+
+~ roman(29) //tens and ones
+XXIX
+
+
+
+
 

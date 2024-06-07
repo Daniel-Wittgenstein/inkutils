@@ -15,38 +15,50 @@
     ~ u3_n -= u3_x * 10
     ~ temp u3_i = u3_n
     {u3_m:
-        -1: M<>
-        -2: MM<>
-        -3: MMM<>
-        -4: MMMM<>
-        -5: MMMMM<>
-        -6: MMMMMM<>
-        -7: MMMMMMM<>
-        -8: MMMMMMMM<>
-        -9: MMMMMMMMM<>
+        -1: M
+        -2: MM
+        -3: MMM
+        -4: MMMM
+        -5: MMMMM
+        -6: MMMMMM
+        -7: MMMMMMM
+        -8: MMMMMMMM
+        -9: MMMMMMMMM
     }
+    {u3_c == 0 and u3_x == 0 and u3_i == 0:
+        ~ return
+    }
+    {u3_m != 0: <>}
     {u3_c:
-        -1: C<>
-        -2: CC<>
-        -3: CCC<>
-        -4: CCCC<>
-        -5: D<>
-        -6: DC<>
-        -7: DCC<>
-        -8: DCCC<>
-        -9: CM<>
+        -1: C
+        -2: CC
+        -3: CCC
+        -4: CCCC
+        -5: D
+        -6: DC
+        -7: DCC
+        -8: DCCC
+        -9: CM
     }
+    {u3_x == 0 and u3_i == 0:
+        ~ return
+    }
+    {u3_c != 0: <>}
     {u3_x:
-        -1: X<>
-        -2: XX<>
-        -3: XXX<>
-        -4: XL<>
-        -5: L<>
-        -6: LX<>
-        -7: LXX<>
-        -8: LXXX<>
-        -9: XC<>
+        -1: X
+        -2: XX
+        -3: XXX
+        -4: XL
+        -5: L
+        -6: LX
+        -7: LXX
+        -8: LXXX
+        -9: XC
     }
+    {u3_i == 0:
+        ~ return
+    }
+    {u3_x != 0: <>}
     {u3_i:
         -1: I
         -2: II
