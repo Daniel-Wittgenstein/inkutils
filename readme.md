@@ -279,3 +279,5 @@ She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned
   in 30% of cases, x will be assigned either "swamp", "high mountains" or "marshland" (at random) etc.
 
   The numbers must be integers and must add up to exactly 100%, otherwise you will get an ink error.
+
+  Note: bucket_random can only return random strings, not numbers
