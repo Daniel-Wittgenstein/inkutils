@@ -3,6 +3,9 @@ A collection of useful [ink](https://www.inklestudios.com/ink/) functions that c
 License: [MIT license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/license.md)
 or [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/deed.en). Choose whichever you prefer.
 
+
+# Ink files: (Right-click -> "Save as Link" 😄)
+
 [standard.ink: Standard Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/standard.ink)
 
 [pronouns.ink: Pronoun Handling](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/pronouns.ink)
