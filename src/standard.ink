@@ -80,3 +80,6 @@
     {u3_x < 0:
         ~ u3_x = 0
     }
+    
+=== function chance(u3_x)
+    ~ return RANDOM(1, 100) <= u3_x

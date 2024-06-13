@@ -28,8 +28,10 @@ etc.
 
 Swaps the values of two variables.
 
+```
 ~ swap(a, b)
-  
+```
+
 Now a holds the value of b and b holds the value of a.
 
 ### alter(variable, value)
@@ -38,21 +40,27 @@ Increases the value of a variable.
 
 While you could, of course just do:
 
+```
   ~ health += 10
+```
 
 this function allows you to change variables inline. Example from the official Ink docs:
 
+```
   \* I gave a biscuit to Monsieur Fogg[] and he wolfed it down most undecorously. {alter(foggs_health, 1)}
+```
 
-(Hint: to decrease, use a negative value: alter(gold, -10))
+(Hint: to decrease a variable you can, of course, use a negative value: alter(gold, -10))
 
 ### alter_mult(variable, value)
 
 Like alter, but multiplies the variable.
 
-~ charisma = 7
 
+```
+~ charisma = 7
 ~ alter_mult(charisma, 3)
+```
 
 "charisma" is 21 now.
 
@@ -60,9 +68,10 @@ Like alter, but multiplies the variable.
 
 Like alter, but divides the variable.
 
+```
 ~ charisma = 12
-
 ~ alter_div(charisma, 3)
+```
 
 "charisma" is 4 now.
 
@@ -70,7 +79,9 @@ Like alter, but divides the variable.
 
 Returns the smaller one of two numbers.
 
+```
 ~ x = min (13, 2)
+```
 
 Assigns 2 to x because it's smaller than 13.
 
@@ -78,7 +89,9 @@ Assigns 2 to x because it's smaller than 13.
 
 Returns the bigger one of two numbers.
   
+```
 ~ x = max (13, 2)
+```
 
 Assigns 13 to x because it's bigger than 2.
 
@@ -86,17 +99,23 @@ Assigns 13 to x because it's bigger than 2.
 
 Rounds a number.
 
+```
 ~ x = round(3.5)
+```
 
 x is 4 now.
 
+```
 ~ x = round(3.2)
+```
 
 x is 3 now.
 
 Beware of floating point math, though:
 
+```
 ~ x = round(4.4999999)
+```
 
 x is 5 (!) now.
 
@@ -107,11 +126,15 @@ and 4.4999999 is interpreted as 4.5 which rounds up to 5.)
 
 Returns the absolute value of the number.
 
+```
 ~ x = abs(7)
+```
 
 x is 7 now.
 
+```
 ~ x = abs(-15)
+```
 
 x is 15 now.
 
@@ -121,7 +144,6 @@ Decreases the value of variable by "number" percent.
 
 ```
 ~ x = 60
-
 ~ minus(x, 25)
 ```
 
@@ -133,7 +155,6 @@ Calculates the difference between 100 and the variable value and increases the v
 
 ```
 ~ x = 60
-
 ~ plus(x, 25)
 ```
 
@@ -146,7 +167,9 @@ The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.ch
 
 Returns a random number in a range, excluding one number.
 
+```
 ~ x = random_without(1, 5, 3)
+```
 
 Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
 
@@ -156,7 +179,9 @@ Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
 
 Returns the number as an English word if it's between 0 and 9, otherwise returns the number.
 
+```
 {number_as_word(7)}, {number_as_word(8)}, {number_as_word(9)}, {number_as_word(10)}, {number_as_word(11)}
+```
 
 Will print: "seven, eight, nine, 10, 11"
 
@@ -167,6 +192,7 @@ character's pronouns and related stuff.
 ###  Setting and Printing Pronouns
 You can set pronouns for up to 6 virtual characters using the **init_character** function:
 
+```
 ~ init_character(1, "he") //the first character has he/him pronouns
 
 ~ init_character(2, "she") //the second character has she/her pronouns
@@ -178,10 +204,13 @@ You can set pronouns for up to 6 virtual characters using the **init_character**
 ~ init_character(3, "you") //etc.
 
 ~ init_character(4, "it") 
+```
 
 After the character pronouns are initialized, you can do this:
 
-**{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.**
+```
+{They} look{s} at {themselves} - at {their} own reflection. The reflection looks back at {them}.
+```
 
 This will print one of the following (depending on the pronouns you set for the first character):
 
@@ -199,7 +228,9 @@ This will print one of the following (depending on the pronouns you set for the 
 
 For the second character, you would use:
 
+```
 {They2} look{s2} at {themselves2} - at {their2} own reflection. The reflection looks back at {them2}.
+```
 
 etc.
 
@@ -247,7 +278,9 @@ Prints: "The person takes their purse."
 
 Prints the number as a Roman numeral.
 
+```
 ~ roman(7694)
+```
 
 Will print "MMMMMMMDCXCIV".
 
@@ -266,7 +299,9 @@ Note 3: You cannot assign the Roman number to a variable, you can only print it.
 
 Returns one of its arguments at random.
 
+```
 ~ x = pick3(1, 5, 7)
+```
 
 Returns either 1, 5 or 7 
 
@@ -276,11 +311,13 @@ She seems {pick7("busy", "tired", "angry", "annoyed", "happy", "sad", "concerned
 
 ### bucket_random4 ... bucket_random20
 
-  ~ x = bucket_random15("50%", "forest", "plains", "hills", "mountains", "30%", "swamp", "high mountains", "marshland", "18%", "tropical rain forest", "tundra", "2%", "Taiga", "Maquis shrubland")
+```
+~ x = bucket_random15("50%", "forest", "plains", "hills", "mountains", "30%", "swamp", "high mountains", "marshland", "18%", "tropical rain forest", "tundra", "2%", "Taiga", "Maquis shrubland")
+```
 
-  In 50% of cases, x will be assigned either "forest", "plains", "hills" or "mountains" (at random),
-  in 30% of cases, x will be assigned either "swamp", "high mountains" or "marshland" (at random) etc.
+In 50% of cases, x will be assigned either "forest", "plains", "hills" or "mountains" (at random),
+in 30% of cases, x will be assigned either "swamp", "high mountains" or "marshland" (at random) etc.
 
-  The numbers must be integers and must add up to exactly 100%, otherwise you will get an ink error.
+The numbers must be integers and must add up to exactly 100%, otherwise you will get an ink error.
 
-  Note: bucket_random can only return random strings, not numbers
+Note: bucket_random can only return random strings, not numbers
