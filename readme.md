@@ -4,15 +4,15 @@ License: [MIT license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main
 or [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/deed.en). Choose whichever you prefer.
 
 
-# Ink files:
+# Ink files: (Right-click -> "Save as Link" 😄)
 
-[standard.ink: Standard Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/standard.ink)
+[standard.ink: Standard Functions](https://raw.githubusercontent.com/Daniel-Wittgenstein/inkutils/main/src/standard.ink)
 
-[pronouns.ink: Pronoun Handling](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/pronouns.ink)
+[pronouns.ink: Pronoun Handling](https://raw.githubusercontent.com/Daniel-Wittgenstein/inkutils/main/src/pronouns.ink)
 
-[roman.ink: Roman Numbers](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/roman.ink)
+[roman.ink: Roman Numbers](https://raw.githubusercontent.com/Daniel-Wittgenstein/inkutils/main/src/roman.ink)
 
-[random.ink: Additional Random Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/random.ink)
+[random.ink: Additional Random Functions](https://raw.githubusercontent.com/Daniel-Wittgenstein/inkutils/main/src/random.ink)
 
 Usage:
 
