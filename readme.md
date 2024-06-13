@@ -4,7 +4,7 @@ License: [MIT license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main
 or [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/deed.en). Choose whichever you prefer.
 
 
-# Ink files: (Right-click -> "Save as Link" 😄)
+# Ink files:
 
 [standard.ink: Standard Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/standard.ink)
 
