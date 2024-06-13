@@ -1,4 +1,7 @@
-A collection of useful [ink](https://www.inklestudios.com/ink/) functions that can be used in any story (commercial use is allowed: [license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/license.md)).
+A collection of useful [ink](https://www.inklestudios.com/ink/) functions that can be used in any story.
+
+License: [MIT license](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/license.md)
+or [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/deed.en). Choose whichever you prefer.
 
 [standard.ink: Standard Functions](https://github.com/Daniel-Wittgenstein/inkutils/blob/main/src/standard.ink)
 
@@ -134,7 +137,7 @@ Calculates the difference between 100 and the variable value and increases the v
 The difference between 100 and 60 is 40. 25% of 40 is 10, so x gets
 increased by 10 and ends up being 70.
 
-The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s "Fairmath" operators. They guarantee that the value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values).
+The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s ["Fairmath"](https://choicescriptdev.fandom.com/wiki/Arithmetic_operators#Fairmath) operators. They guarantee that the value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values).
 
 ### random_without(from, to, excluding)
 
