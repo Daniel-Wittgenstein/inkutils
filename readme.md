@@ -252,9 +252,6 @@ the number 8 as VIII, not as IIX, the number 80 as LXXX, not as XXC, etc.
 
 Note 3: You cannot assign the Roman number to a variable, you can only print it.
 
-
-{bucket_random16("50%", "forest", "plains", "hills", "mountains", "30%", "swamp", "high mountains", "marshland", "15%", "tropical rain forest", "tundra", "5%", "Maquis shrubland", "Wattenmeer", "Taiga")}
-
 # random.ink
 
 (This file is pretty big due to variable argument length functions.)
