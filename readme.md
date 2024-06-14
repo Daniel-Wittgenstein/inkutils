@@ -165,7 +165,7 @@ The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.ch
 
 ### random_without(from, to, excluding)
 
-Returns a random number in a range, excluding one number.
+Returns a random integer number in a range, excluding one number.
 
 ```
 ~ x = random_without(1, 5, 3)
@@ -174,6 +174,26 @@ Returns a random number in a range, excluding one number.
 Now x will be a number between 1 and 5, excluding 3 (so: 1, 2, 4 or 5).
 
 (Note: If you pass the exact same number for all three parameters (for example: "random_without(2, 2, 2)"), there is no reasonable result to return, so we just return the number (2))
+
+### chance(integer)
+
+You can use this function to quickly write conditions that succeed in x% of cases.
+
+A loaded coin that wins 74% of throws: 
+
+```
+{chance(74):
+  The coin shows heads. You won!
+  - else:
+  The coin shows tails. You lost!
+}
+```
+
+Show this choice only in 13% of cases:
+
+```
++ {chance(13)} Use the VIP entrance.
+```
 
 ### number_as_word(number)
 
