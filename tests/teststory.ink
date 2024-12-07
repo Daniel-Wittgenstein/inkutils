@@ -21,8 +21,11 @@ random_without {x} {x == 3: Result should never be 3.}
 }
 
 -> back1
-
 - (continue1)
+
+
+
+
 
 
 {round(-1.49)}
@@ -316,6 +319,21 @@ CCIII
 ~ roman(29) //tens and ones
 XXIX
 
+
+
+
+~ count = 100
+- (backb2)
+~ x = random_without(4, 5, 5)
+random_without {x}
+random_without {x} {x != 4: Result should always be 4.}
+~ count--
+{count <= 0:
+    -> continueb2
+}
+
+-> backb2
+- (continueb2)
 
 
 
