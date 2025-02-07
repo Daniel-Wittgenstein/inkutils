@@ -198,60 +198,64 @@ person
 {gend5("man", "woman", "person")}
 person
 
+~ x = 10
+~ lower(x, 20)
+{x}
+8
 
 ~ x = 10
-~ minus(x, 20)
+~ lower(x, -20)
 {x}
 8
 
 ~ x = 50
-~ minus(x, 20)
+~ lower(x, 20)
 {x}
 40
 
 ~ x = 90
-~ minus(x, 20)
+~ lower(x, 20)
 {x}
 72
 
 ~ x = 10
-~ plus(x, 20)
+~ raise(x, 20)
 {x}
 28
 
 ~ x = 50
-~ plus(x, 20)
+~ raise(x, 20)
 {x}
 60
 
 ~ x = 90
-~ plus(x, 20)
+~ raise(x, 20)
 {x}
 92
 
 ~ x = 1
-~ minus(x, 40)
+~ lower(x, 40)
 {x}
 1
 
 ~ x = 99
-~ plus(x, 40)
+~ raise(x, 40)
 {x}
 99
 
 ~ x = 1
-~ minus(x, 10000)
+~ lower(x, 10000)
 {x}
 0
 
 ~ x = 1
-~ plus(x, 10000)
+~ raise(x, 10000)
 {x}
 100
 
 
 ~ x = 60
-~ plus(x, 25)
+~ raise(x, 25)
 {x}
 70
 

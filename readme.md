@@ -138,30 +138,48 @@ x is 7 now.
 
 x is 15 now.
 
-### minus(variable, number)
 
-Decreases the value of variable by "number" percent.
+### raise(variable, number)
 
-```
-~ x = 60
-~ minus(x, 25)
-```
+*(These functions were formally called "plus" and "minus", but that's just too confusing.)*
 
-25% of 60 = 15, so x gets decreased by 15 and ends up being 45.
+The "raise" and "lower" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s ["Fairmath"](https://choicescriptdev.fandom.com/wiki/Arithmetic_operators#Fairmath) operators. They guarantee that a value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values). They are typically used for stats in a game.
 
-### plus(variable, number)
-
-Calculates the difference between 100 and the variable value and increases the variable value by "number" percent of that amount.
+"raise" calculates the difference between 100 and the current variable value and increases the variable value by "number" percent of that amount.
 
 ```
 ~ x = 60
-~ plus(x, 25)
+~ raise(x, 25)
 ```
 
 The difference between 100 and 60 is 40. 25% of 40 is 10, so x gets
 increased by 10 and ends up being 70.
 
-The "plus" and "minus" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s ["Fairmath"](https://choicescriptdev.fandom.com/wiki/Arithmetic_operators#Fairmath) operators. They guarantee that the value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values).
+### lower(variable, number)
+
+"lower" decreases the value of variable by "number" percent.
+
+```
+~ x = 60
+~ lower(x, 25)
+```
+
+25% of 60 = 15, so x gets decreased by 15 and ends up being 45.
+
+Note:
+You should never pass a negative number to "lower" on purpose. Don't do this: "lower(x, -10)".
+It doesn't make any mathematical sense, because "lower" is not simply the negated
+version of "raise", it works with percentages, instead. (Carefully read the description of how "raise" and "lower" work and you will realize it's true. 😊)
+To raise a value, use "raise", instead.
+
+However, if you *accidentally* still call "lower" with a negative value, it will just be treated
+like a positive value, so "lower(x, -10)" and "lower(x, 10)" will be treated exactly the same!
+This is a safeguard against accidentally slipping in a minus symbol which happens more often
+than you'd think.
+
+The same goes true for "raise", of course. Never do: "raise(x, -10)"!
+To lower a value, use the "lower" function, instead.
+
 
 ### random_without(from, to, excluding)
 
