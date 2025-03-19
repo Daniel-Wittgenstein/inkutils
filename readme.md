@@ -141,7 +141,7 @@ x is 15 now.
 
 ### raise(variable, number)
 
-*(These functions were formally called "plus" and "minus", but that's just too confusing.)*
+*(These functions were formerly called "plus" and "minus", but that's just too confusing.)*
 
 The "raise" and "lower" functions are modeled after [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/)'s ["Fairmath"](https://choicescriptdev.fandom.com/wiki/Arithmetic_operators#Fairmath) operators. They guarantee that a value always stays between 0 and 100 and that it's harder to reach more extreme values (very high or very low values). They are typically used for stats in a game.
 
